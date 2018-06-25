@@ -18,10 +18,10 @@ spec:
 {{- end }}
     spec:
       containers:
-      imagePullSecrets:
-      - name: regcred
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+      imagePullSecrets:
+      - name: regcred
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}
