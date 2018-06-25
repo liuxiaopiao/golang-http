@@ -4,7 +4,7 @@
 replicaCount: 1
 image:
   repository: phx.ocir.io/dtefaoncompute/liuxiaopiao/golang-http
-  tag: dev
+  tag: 0.0.7
   pullPolicy: IfNotPresent
 service:
   name: golang-http
